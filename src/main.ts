@@ -10,7 +10,7 @@ const repository = new UserRepository(AppDataSource, UserSchema)
 async function main() {
     await AppDataSource.initialize()
 
-    var r = await repository.create({ email: "aaa", name: "bbb" })
+    var r = await repository.create({ email: "email@email.com", name: "usuário" })
     console.log(r)
     var list = await repository.findAll()
     console.table(list)
